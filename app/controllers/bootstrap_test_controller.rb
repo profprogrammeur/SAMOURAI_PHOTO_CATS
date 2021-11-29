@@ -1,2 +1,0 @@
-class BootstrapTestController < ApplicationController
-end
