@@ -1,24 +1,27 @@
-# README
+<h1 align="center">Welcome to SAMOURAI_PHOTO_CATS 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-ruby 2.7.4 rails 5.2.6-blue.svg?cacheSeconds=2592000" />
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> E-commerce site that sells cats images
 
-Things you may want to cover:
+### 🏠 [Homepage](samourai photo cats)
 
-* Ruby version
+### ✨ [Demo](https://samourai-photo-cats.herokuapp.com/)
 
-* System dependencies
+## Install
 
-* Configuration
+```sh
+bundle install 
+```
 
-* Database creation
+## Author
 
-* Database initialization
+👤 **Antoine/Kim/Hugo/Paul**
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Show your support
 
-* Deployment instructions
+Give a ⭐️ if this project helped you!
 
-* ...
+***
