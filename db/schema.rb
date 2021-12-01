@@ -32,13 +32,24 @@ ActiveRecord::Schema.define(version: 2021_12_30_104747) do
   end
 
   create_table "join_cart_items", force: :cascade do |t|
+    t.bigint "cart_id"
+    t.bigint "item_id"
+    t.integer "quantity", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_join_cart_items_on_cart_id"
+    t.index ["item_id"], name: "index_join_cart_items_on_item_id"
   end
 
   create_table "join_order_items", force: :cascade do |t|
+    t.decimal "buying_price"
+    t.integer "quantity"
+    t.bigint "order_id"
+    t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_join_order_items_on_item_id"
+    t.index ["order_id"], name: "index_join_order_items_on_order_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -64,5 +75,9 @@ ActiveRecord::Schema.define(version: 2021_12_30_104747) do
   end
 
   add_foreign_key "carts", "users"
+  add_foreign_key "join_cart_items", "carts"
+  add_foreign_key "join_cart_items", "items"
+  add_foreign_key "join_order_items", "items"
+  add_foreign_key "join_order_items", "orders"
   add_foreign_key "orders", "users"
 end

@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # Item.destroy_all
+require 'faker'
+
 5.times do |x|
   puts x
   4.times do |id|
@@ -14,4 +16,6 @@
   end
 end
 
-# user = User.create(email: 'lacherlapatte@yopmail.com', last_name: 'cat', first_name: 'pizzy', password: 'aaaaaa')
+
+
+
