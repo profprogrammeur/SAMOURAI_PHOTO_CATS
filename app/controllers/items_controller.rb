@@ -6,9 +6,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-  	@item = Item.find(params[:id])
-
-    user_signed_in?
-
+    @item = Item.find(params[:id])
   end
+
+
 end
