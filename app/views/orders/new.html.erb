@@ -8,14 +8,14 @@
       <p><%= flash[:error] %></p>
     </div>
   <% end %>
-  <label class="amount">
-    <span>Amount: $5.00</span>
+  <label class="amount m-5">
+    <h4><%=@item_price %></h4>
   </label>
 </article>
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
     data-description="Achat d'un produit"
-    data-amount="500"
+    data-amount=<%=@item_price.to_f*100%>
     data-locale="auto">
 </script>
 <% end %>

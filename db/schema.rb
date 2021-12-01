@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_30_142904) do
+ActiveRecord::Schema.define(version: 2021_12_30_104745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,14 +20,6 @@ ActiveRecord::Schema.define(version: 2021_11_30_142904) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_carts_on_user_id"
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.text "content"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -47,19 +39,9 @@ ActiveRecord::Schema.define(version: 2021_11_30_142904) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
-  create_table "ratings", force: :cascade do |t|
-    t.integer "rating"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_ratings_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "first_name", null: false
-    t.string "last_name", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -72,7 +54,5 @@ ActiveRecord::Schema.define(version: 2021_11_30_142904) do
   end
 
   add_foreign_key "carts", "users"
-  add_foreign_key "comments", "users"
   add_foreign_key "orders", "users"
-  add_foreign_key "ratings", "users"
 end

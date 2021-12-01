@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   def new
+    @item_price = params[:item_price]
   end
 
   def create

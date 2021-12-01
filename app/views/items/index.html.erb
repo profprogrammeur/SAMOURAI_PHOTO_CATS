@@ -1,0 +1,22 @@
+
+ <div class="container">
+    <h2 class="mb-4">Tous les chats</h2>
+    <div class="row gx-4 gy-4 mb-3">
+
+  <% @items.each do |item| %>
+              
+      <div class="col-sm-3">
+        <a href="<%= item_path(item.id) %>">
+          <%= image_tag item.image_url, :alt => "cat image",class:"card-img ",style: "height: 300px, width:auto" %>
+        </a>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%=item.title%></h5>
+            <p class="card-text"><%=item.description%></p>
+            <a href="<%= item_path(item.id) %>" class="btn btn-primary">Acheter cette photo</a>
+          </div>
+        </div>
+      </div>
+
+  <%end%>
+    
