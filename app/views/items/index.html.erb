@@ -1,3 +1,5 @@
+
+<!-- JUMBOTRON -->
 <body>
   <div class="container py-5">
     <div class="jumbotron text-white jumbotron-image shadow" style="background-image: url(https://www.nipponconnection.fr/wp-content/uploads/2014/09/Sans-titre-1.jpg);">
@@ -19,7 +21,8 @@
           <div class="card-body">
             <h5 class="card-title"><%=item.title%></h5>
             <p class="card-text"><%=item.description%></p>
-            <a href="<%= item_path(item.id) %>" class="btn btn-warning" >Acheter cette photo</a>
+            <a href="<%= item_path(item.id) %>" class="btn btn-warning" >Voir cette photo</a>
+            <i class="fas fa-cart-arrow-down fa-2x"></i>
           </div>
         </div>
       </div>
