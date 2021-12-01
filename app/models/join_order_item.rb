@@ -1,0 +1,2 @@
+class JoinOrderItem < ApplicationRecord
+end
