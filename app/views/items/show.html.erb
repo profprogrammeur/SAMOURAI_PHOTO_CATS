@@ -1,37 +1,38 @@
 
-
+  
   <div class="container">
     <div class="card m-4">
-      <div class="row g-2">
-        <div class="col-lg-8">
+      <div class="row g-4 d-flex justify-content-center">
+        <div class="col-lg-10">
           <%# <img src="https://loremflickr.com/320/240?random=2" class="img-fluid rounded-start"> %>
+          <p align="center">
             <%= image_tag @item.image_url, :alt => "cat image",style: "height: 300px",class: "img-fluid rounded-start" %>
+            </p>
         </div>
-        <div class="col-lg-4">
-          <div class="card-body h-100">
+        <div class="col-lg-4" >
+          <div class="card-body h-100 d-flex justify-content-center">
             <div class="list-group">
-              <p class="mb-5"><i class="far fa-calendar"></i> 2021-12-24</p>
-              <p class="h3 mb-auto"></p>
-              <p class="text-secondary">julien</p>
+              
             </div>
-            <p class="position-absolute bottom-0 mb-3 text-secondary"><%=@item.price%> €</p>
+             
+            <p class=""><%=@item.price%> €</p>
           </div>
         </div>
       </div>
     </div>
     <div>
       <div class="pb-3 border-bottom text-center">
-        <p class="align-middle mb-0 ms-3"><i class="fas fa-share me-3"></i> <i class="far fa-heart"></i></p>
+        <p style="text-align:center"><i class="fas fa-share me-3"></i> <i class="far fa-heart"></i></p>
          
         <button type="button" class="btn btn-warning" href="<%= new_order_path(item_price: @item.price) %>">Ajouter au panier</button>
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-5 d-flex justify-content-center">
       <div class="col-lg-8">
-         <h2 ><%=@item.title%></h2>
+         <h2><p style="text-align:center"><%=@item.title%></h2></p>
         <p class="h4"></p>
 
-        <h5><%=@item.description%></h5>       
+        <h5><p style="text-align:center"><%=@item.description%></h5></p>       
 
         <p class="mt-5 mb-3">Tags</p>
         <p>
