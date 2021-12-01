@@ -1,6 +1,12 @@
-
+<body>
+  <div class="container py-5">
+    <div class="jumbotron text-white jumbotron-image shadow" style="background-image: url(https://www.nipponconnection.fr/wp-content/uploads/2014/09/Sans-titre-1.jpg);">
+      <h2 class="mb-4 "><p style="text-align:center">Tous les chats</h2></p>
+    </div>
+  </div>
+</body>
  <div class="container">
-    <h2 class="mb-4 "><p style="text-align:center">Tous les chats</h2></p>
+    
     <div class="row gx-4 gy-4 mb-3">
 
   <% @items.each do |item| %>
@@ -9,7 +15,7 @@
         <a href="<%= item_path(item.id) %>">
           <%= image_tag item.image_url, :alt => "cat image",class:"card-img ",style: "height: 300px, width:auto" %>
         </a>
-        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;" style="backgound-color: rgb(255,120,81)">
+        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
           <div class="card-body">
             <h5 class="card-title"><%=item.title%></h5>
             <p class="card-text"><%=item.description%></p>
