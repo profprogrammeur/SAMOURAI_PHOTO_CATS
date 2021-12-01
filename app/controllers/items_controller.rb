@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
  
   def index
   	@items = Item.all
@@ -6,7 +7,8 @@ class ItemsController < ApplicationController
 
   def show
   	@item = Item.find(params[:id])
+
+    user_signed_in?
+
   end
-
-
 end
