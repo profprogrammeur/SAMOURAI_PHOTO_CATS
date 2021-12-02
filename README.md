@@ -42,7 +42,7 @@ Configuration
 
 Entrez les commandes suivantes dans votre terminal préféré :
 
-git clone git@github.com:luca-montaigut/Projet_Chatons.git
+git clone git@github.com:profprogrammeur/SAMOURAI_PHOTO_CATS.git
 
 cd SAMOURAI_PHOTO_CATS
 
@@ -70,13 +70,14 @@ Une fois le server connecté, rendez-vous sur :
 
 http://localhost:3000/
 
-(Rappel) Compte Administrateur
+(Rappel) Compte Visiteur avec obligation de se connecter
 
-Connectez-vous avec : login : lazyrabbit@yopmail.com | password : 123456
+
 
 Bonne visite !
 
 🐰 Auteurs
 
 Hugo CLAISSE
+Paul Kone
 
