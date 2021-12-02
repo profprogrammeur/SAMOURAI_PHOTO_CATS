@@ -9,7 +9,7 @@ Things you may want to cover:
 * ruby use 2.7.4
 
 * System dependencies
-* gem aws
+* gem aws-sdk-s3
 * gem minimagick
 
 * Configuration
@@ -30,11 +30,11 @@ Things you may want to cover:
 * ...
 ![Screenshot 2021-12-02 at 22 39 44](https://user-images.githubusercontent.com/45837593/144507586-6b2ede0b-a3aa-4822-833c-ecc907115c5d.png)
 
-Visite en ligne http://whiskers.herokuapp.com/
+Visite en ligne https://samouraiphotocats.herokuapp.com
 
 Compte Visiteur
 
-Connectez-vous sans mot de passe
+Connectez-vous sans mot de passe a votre compte client
 
 🔧 Installation en local
 
