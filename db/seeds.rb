@@ -14,4 +14,4 @@
   end
 end
 
-# user = User.create(email: 'lacherlapatte@yopmail.com', last_name: 'cat', first_name: 'pizzy', password: 'aaaaaa')
+user = User.create(email: 'lacherlapatte@yopmail.com', password: 'aaaaaa')
