@@ -28,6 +28,7 @@ gem 'devise'
 
 gem 'dotenv-rails'
 gem 'stripe'
+gem 'mailjet'
 
 
 # Use ActiveStorage variant
