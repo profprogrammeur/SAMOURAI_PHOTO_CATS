@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'items#index'
   get 'static_pages/secret'
   devise_for :users
