@@ -6,8 +6,11 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+* ruby use 2.7.4
 
 * System dependencies
+* gem aws
+* gem
 
 * Configuration
 
