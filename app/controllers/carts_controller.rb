@@ -6,7 +6,6 @@ class CartsController < ApplicationController
     @carts = Cart.all
     @carts_length = (Cart.find_by(user_id: current_user.id)).items.length
   end  
->>>>>>> development
 
   def show
     @cart = Cart.find_by(user_id: params[:id])
