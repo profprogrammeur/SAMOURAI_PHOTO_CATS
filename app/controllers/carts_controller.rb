@@ -3,11 +3,13 @@ class CartsController < ApplicationController
      @cart = Cart.new
   end
 
-  def create
-    
+  def index
+    @carts = Cart.all
+    @carts_length = (Cart.find_by(user_id: current_user.id)).items.length    
   end
 
   def show
+    @cart = Cart.find_by(user_id: params[:id])
   end
 
     def update
@@ -21,4 +23,13 @@ class CartsController < ApplicationController
     end
   end
 
+  def destroy
+    @user = current_user
+    @item = Item.find_by(id: params[:id])
+    @cart = Cart.find_by(user_id: current_user.id)
+    @cart_item = JoinTableCartItem.find_by(cart_id: @cart.id, item_id: @item.id).destroy
+    respond_to do |format|
+      format.html { redirect_to cart_path(@user.id)}
+    end
+  end
 end
