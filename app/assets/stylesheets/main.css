@@ -16,11 +16,17 @@
     width: 100%;
     height: 15vw;
     object-fit: cover;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card-btn{
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-self: flex-end;
 }
 
+
+.container {
+    width: 970px !important;
+}
