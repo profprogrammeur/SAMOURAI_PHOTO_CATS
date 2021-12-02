@@ -9,7 +9,7 @@ Things you may want to cover:
 * ruby use 2.7.4
 
 * System dependencies
-* gem aws
+* gem aws-sdk-s3
 * gem minimagick
 
 
@@ -36,7 +36,7 @@ Visite en ligne https://samouraiphotocats.herokuapp.com
 
 Compte Visiteur
 
-Connectez-vous sans mot de passe
+Connectez-vous sans mot de passe a votre compte client
 
 🔧 Installation en local
 
