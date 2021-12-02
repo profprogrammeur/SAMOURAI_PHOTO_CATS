@@ -659,7 +659,6 @@ progress {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
-  margin-top: 20px;
 }
 
 @media (min-width: 576px) {
@@ -1008,7 +1007,7 @@ progress {
     flex: 0 0 auto;
     width: 33.333333%;
   }
-  .col-sm-5 {container
+  .col-sm-5 {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: 41.666667%;

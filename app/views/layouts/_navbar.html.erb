@@ -15,7 +15,16 @@
         <li class="nav-item"><a class=" btn btn-outline-secondary btn-sm" href="<%= new_user_registration_path %>">S'inscrire</a></li>                     
       <%end%>
 
+       <% if user_signed_in? %>
+       <%= link_to "PANIER : <span class='badge'>#{ current_user.cart.items.count}</span>".html_safe, cart_path(current_user.id), class:"nav-link btn btn-outline-secondary mr-2"%>
+                                  <%# current_user.cart.items.count                              current_user.id              %>
+        <% end %>
       </ul>
     </div>
   </div>
 </nav>
+
+<% if user_signed_in? %>
+<%="current_user.cart.items.count : "%><%=" #{current_user.cart.items.count}"%> <br>
+<%="current_user.cart.id : "%><%=" #{current_user.cart.id}"%> 
+<% end %>
