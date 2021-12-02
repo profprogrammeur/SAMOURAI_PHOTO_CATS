@@ -37,6 +37,11 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # application.rb or config/environments specific settings, which take precedence
+  config.action_mailer.delivery_method = :mailjet 
+
+
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
