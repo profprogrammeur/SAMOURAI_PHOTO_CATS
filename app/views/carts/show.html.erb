@@ -27,6 +27,7 @@
           <div class="container mt-5">
             <div class="card mt-2 mb-3 text-center card-center">
               <h5 class="mb-4 action-banner" >Prix total : <%= @cart.total %> €</h5>
+               <a class="btn btn-warning btn-sm" href="<%= new_order_path(item_price: @cart.total) %>">PAYER</a>
               <p>Une fois le réglement effectué vous recevrez vos photos de chats directement sur votre email !</p>
         <% else %>
               <p> Votre panier est vide </p>

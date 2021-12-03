@@ -1,21 +1,37 @@
-<h1>Orders#new</h1>
-<p>Find me in app/views/orders/new.html.erb</p>
+
+
+<div class="container text-center mt-5 ">
+
+<div class="card" style="width: 28rem;">
+    <%= image_tag "pizcats", :alt => "cat image",class:"rounded card-img img-fluid ",style: "" %>
+  <div class="card-body d-flex justify-content-center">
+    <h5 class="card-title ">Samourai Photo Cats</h5>
+    <p class="card-text">Des photos de qualité et des pizzas cats à la sauce samourai.</p>
+    <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+
+<div>
 
 <%= form_tag orders_path do %>
-<article>
+<article style="text-align: center;">
   <% if flash[:error].present? %>
     <div id="error_explanation">
       <p><%= flash[:error] %></p>
     </div>
   <% end %>
   <label class="amount m-5">
-    <h4><%=@item_price %></h4>
+    <h4><%=@item_price  %> €</h4>
   </label>
-</article>
+</article> 
+</div>
+ </div>
+
+
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
     data-description="Achat d'un produit"
-    data-amount=<%=@item_price.to_f*100%>
+    data-amount=<%=@item_price.to_f*100 %>
     data-locale="auto">
 </script>
 <% end %>
+
+

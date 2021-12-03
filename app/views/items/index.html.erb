@@ -28,7 +28,7 @@
               <div class="d-flex align-items-center ">
 
               <%# <div class="card-btn"> %>
-              <a href="<%= item_path(item.id) %>" class="btn btn-warning" >Voir la photo</a>
+              <a href="<%= item_path(item.id) %>" class="ml-2 btn btn-warning" >Voir la photo</a>
                   <% if user_signed_in?%>
                   <%= link_to cart_path(item.id), class: "color_cart", remote: true, method: "PUT" do %>
                     <i class=" ml-3 text-warning fas fa-cart-arrow-down fa-2x"></i>
