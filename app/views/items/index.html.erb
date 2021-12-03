@@ -1,39 +1,45 @@
 
 <!-- JUMBOTRON -->
-<body>
+
   <div class="container py-5">
     <div class="jumbotron text-white jumbotron-image shadow" style="background-image: url(https://www.nipponconnection.fr/wp-content/uploads/2014/09/Sans-titre-1.jpg);">
       <h2 class="mb-4 "><p style="text-align:center">Tous les chats</h2></p>
     </div>
   </div>
-</body>
+
  <div class="container">
     
-    <div class="row gx-4 gy-4 mb-3">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
 
   <% @items.each do |item| %>
               
-      <div class="col-sm-3">
-        <a href="<%= item_path(item.id) %>">
-          <%= image_tag item.image_url, :alt => "cat image",class:"card-img ",style: "height: 300px, width:auto" %>
-        </a>
-        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-          <div class="card-body">
-             <h5 class="card-title"><%=item.title%></h5>
-             <p class="card-text"><%=item.description%></p>
-             <div class="card-btn">
-             <a href="<%= item_path(item.id) %>" class="btn btn-warning" >Voir cette photo</a>
-             
-                <% if user_signed_in?%>
-                <%= link_to cart_path(item.id), class: "color_cart", remote: true, method: "PUT" do %>
-                  <i class="fas fa-cart-arrow-down fa-2x"></i>
-                <% end %>
-             
-              <% end %>
-             </div>
+      <div class="col-sm-6 col-lg-4">
+        <%# <div class="card"> %>
+           <div class="card text-white bg-primary mb-3" >
+          <a href="<%= item_path(item.id) %>">
+            <%= image_tag item.image_url, :alt => "cat image",class:"card-img img-fluid ",style: "" %>
+          </a>
 
+       
+            <div class="card-body">
+              <h5 class="card-title"><%=item.title%></h5>
+              <p class="card-text"><%=item.description%></p>
+
+              <div class="d-flex align-items-center ">
+
+              <%# <div class="card-btn"> %>
+              <a href="<%= item_path(item.id) %>" class="btn btn-warning" >Voir la photo</a>
+                  <% if user_signed_in?%>
+                  <%= link_to cart_path(item.id), class: "color_cart", remote: true, method: "PUT" do %>
+                    <i class=" ml-3 text-warning fas fa-cart-arrow-down fa-2x"></i>
+                  <% end %>
+                <% end %>
+              <%# </div> %>
+              </div>
+
+            </div>
           </div>
-        </div>
+        <%# </div> %>
       </div>
 
   <%end%>

@@ -21,7 +21,13 @@
     </div>
     <div>    
            <div class="pb-3 border-bottom text-center">    
-           <button type="button" class="btn btn-warning"  href="<%= new_order_path(item_price: @item.price)  %>">Ajouter au panier</button>
+                  <% if user_signed_in?%>
+                  <%= link_to cart_path(@item.id), class: "color_cart", remote: true, method: "PUT" do %>
+                  <button type="button" class="btn btn-warning" >Ajouter au panier</button>
+
+
+                  <% end %>
+                <% end %>
       </div>
     </div>
     <div class="row mt-5 d-flex justify-content-center">
