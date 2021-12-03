@@ -1,22 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-success  bg-opacity-25" ">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary  bg-opacity-25" ">
   <div class="container px-4 px-lg-5">
-    <a class="navbar-brand" href="<%= root_path %>">Samourai Photo Cats</a>
+    <a class="navbar-brand mr-5" href="<%= root_path %>">Samourai Photo Cats</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 ">
 
       <% if user_signed_in? %>
-        <li class="nav-item "><a class="btn btn-outline-secondary btn-sm" href="<%=  %>">Connecté</a></li>
-         <%= link_to destroy_user_session_path, method: :delete, class:"btn btn-outline-secondary btn-sm"  do %>
-        <span>Se déconnecter</span>
+         <%= link_to destroy_user_session_path, method: :delete, class:"text-center btn btn-outline-dark btn-sm pt-2 mr-4"  do %>
+        <div>Se déconnecter</div>
+        <%= link_to "PANIER : <span class='badge'>#{ current_user.cart.items.count}</span>".html_safe, cart_path(current_user.id), class:"nav-link btn btn-outline-dark btn-sm text-dark"%>
+
       <% end %>
       <%else%>
-        <li class="nav-item "><a class="btn btn-outline-secondary btn-sm" href="<%= new_user_session_path %>">Se connecter</a></li>
-        <li class="nav-item"><a class=" btn btn-outline-secondary btn-sm" href="<%= new_user_registration_path %>">S'inscrire</a></li>                     
+        <li class="nav-item "><a class="btn btn-outline-dark btn-sm" href="<%= new_user_session_path %>">Se connecter</a></li>
+        <li class="nav-item"><a class=" btn btn-outline-dark btn-sm" href="<%= new_user_registration_path %>">S'inscrire</a></li>                     
       <%end%>
 
        <% if user_signed_in? %>
-       <%= link_to "PANIER : <span class='badge'>#{ current_user.cart.items.count}</span>".html_safe, cart_path(current_user.id), class:"nav-link btn btn-outline-secondary mr-2"%>
                                   <%# current_user.cart.items.count                              current_user.id              %>
         <% end %>
       </ul>
@@ -24,7 +24,3 @@
   </div>
 </nav>
 
-<% if user_signed_in? %>
-<%="current_user.cart.items.count : "%><%=" #{current_user.cart.items.count}"%> <br>
-<%="current_user.cart.id : "%><%=" #{current_user.cart.id}"%> 
-<% end %>
